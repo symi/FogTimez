@@ -1,0 +1,23 @@
+{
+  "name": "FogTimez",
+  "version": "0.0.1",
+  "description": "A timing app for loggin time against FogBugz",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon Levy <simonjlevy@gmail.com>",
+  "repository": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-animate": "^1.4.7",
+    "angular-aria": "^1.4.7",
+    "angular-material": "^0.11.4",
+    "clockpicker": "0.0.7",
+    "material-design-icons": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "run-sequence": "^1.1.4"
+  }
+}
