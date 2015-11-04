@@ -1,4 +1,22 @@
-<md-sidenav md-component-id="menu" class="md-sidenav-left md-whiteframe-z2">
-    <md-content>
-    </md-content>
+<md-sidenav layout="column" md-component-id="menu" class="md-sidenav-left md-whiteframe-z2">
+    <md-toolbar class="md-hue-2">
+        <div class="md-body-2">{{ name }}</div>
+        <div class="md-body-1">{{ email }}</div>
+    </md-toolbar>
+    <md-list>
+        <md-list-item layout="row" ng-repeat="item in menu.actions" role="link" md-ink-ripple>
+          <div flex="25"><md-icon aria-label="{{item.title}}">{{ item.icon }}</md-icon></div>
+          <div flex="75" class="md-list-item-text">
+            <span class="md-body-2">{{item.title}}</span>
+          </div>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-subheader  class="md-no-sticky">Management</md-subheader>
+        <md-list-item layout="row" ng-repeat="item in menu.management" role="link" md-ink-ripple>
+          <div flex="25"><md-icon aria-label="{{item.title}}">{{ item.icon }}</md-icon></div>
+          <div flex="75" class="md-list-item-text">
+            <span class="md-body-2">{{item.title}}</span>
+          </div>
+        </md-list-item>
+      </md-list>
 </md-sidenav>

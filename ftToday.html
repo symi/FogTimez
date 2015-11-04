@@ -1,0 +1,13 @@
+<div>    
+    <md-card>
+        <md-list>
+            <md-list-item ng-repeat="item in activity" >            
+                <div layout="row" class="md-list-item-text" layout-fill>
+                    <h4 flex-sm="30" flex-gt-sm="10">{{ item.start }} - {{ item.end }}</h4><p flex-sm="70" flex-gt-sm="90">{{ item.caseNumber }} - {{ item.caseTitle }}</p>
+                </div>
+                <md-divider ng-if="!$last"></md-divider>
+            </md-list-item>            
+        </md-list>
+    </md-card>
+    <p class="md-title inset">{{ timeLogged }} / {{ timeDue }} hours</p>
+</div>
