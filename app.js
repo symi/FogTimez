@@ -53,6 +53,8 @@ function ftDirective (ftMenuService) {
             $scope.closeNav = function () {
                 ftMenuService.requestClose();
             };
+            
+            $scope.dataEntry = true;
         }        
     };
 }
@@ -74,14 +76,36 @@ function ftMenuService ($mdSidenav) {
     }
 }
 
-function ftSpeedDial () {
+function ftSpeedDialDirective () {
     return {
         templateUrl: 'ftSpeedDial.html',
         restrict: 'E'        
     };
 }
 
-function ftToday () {
+function ftDataEntryFormDirective () {
+    return {
+        templateUrl: 'ftDataEntryForm.html',
+        restrict: 'E',
+        scope: true,
+        controller: function ($scope) {
+            $scope.startDate = 'Tue, 3 nov 2015';
+            $scope.endDate = 'Tue, 3 nov 2015';
+            $scope.startTime = '15:30';
+            $scope.endTime = '16:30';
+            $scope.case = '12345 - My Desctions Case Name';
+        }        
+    };
+}
+
+function ftDataEntryToolbarDirective () {
+    return {
+        templateUrl: 'ftDataEntryToolbar.html',
+        restrict: 'E'        
+    };
+}
+
+function ftTodayDirective () {
     return {
         templateUrl: 'ftToday.html',
         restrict: 'E',
@@ -146,6 +170,8 @@ angular.module( 'fog-timez', ['ngMaterial'])
     .directive("ft", ['ftMenuService', ftDirective])
     .directive("ftNav", ftNavDirective)
     .directive("ftOverflowMenu", ftOverflowMenuDirective)
-    .directive("ftSpeedDial", ftSpeedDial)
-    .directive("ftToday", ftToday)
+    .directive("ftSpeedDial", ftSpeedDialDirective)
+    .directive("ftDataEntryForm", ftDataEntryFormDirective)
+    .directive("ftDataEntryToolbar", ftDataEntryToolbarDirective)
+    .directive("ftToday", ftTodayDirective)
     .directive("ftToolbar", ftToolbarDirective);

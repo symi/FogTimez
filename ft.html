@@ -1,14 +1,22 @@
-<div layout="column" layout-column flex role="main">
-        <ft-speed-dial style="top: auto;
-            right: 20px;
-            bottom: 20px;
-            left: auto;
-            position: absolute;"></ft-speed-dial>
-        <ft-nav></ft-nav>
-        <ft-toolbar></ft-toolbar> 
-        <md-content md-scroll-y flex layout-padding style="background-color:#eee;">
-            <ui-view layout="column" layout-fill layout-padding>
-                <ft-today></ft-today>
-            </ui-view>
-        </md-content>
-    </div>
+<div layout="column" layout-column flex role="main" ng-hide="dataEntry">
+    <ft-speed-dial style="top: auto;
+        right: 20px;
+        bottom: 20px;
+        left: auto;
+        position: absolute;"></ft-speed-dial>
+    <ft-nav></ft-nav>
+    <ft-toolbar></ft-toolbar> 
+    <md-content md-scroll-y flex layout-padding style="background-color:#eee;">
+        <ui-view layout="column" layout-fill layout-padding>
+            <ft-today></ft-today>
+        </ui-view>
+    </md-content>
+</div>
+<div layout="column" layout-column flex role="main" ng-show="dataEntry">
+    <ft-data-entry-toolbar></ft-data-entry-toolbar> 
+    <md-content md-scroll-y flex layout-padding style="background-color:#eee;">
+        <ui-view layout="column" layout-fill layout-padding>
+            <ft-data-entry-form></ft-data-entry-form>
+        </ui-view>
+    </md-content>
+</div>

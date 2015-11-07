@@ -1,0 +1,18 @@
+<md-list>
+    <md-list-item>            
+        <div layout="row" layout-fill>
+            <md-icon>schedule</md-icon>
+            <div layout="column">
+                <div layout="row"><p>{{ entry.startDate }}</p><p>{{ entry.startTime }}</p></div>
+                <div layout="row"><p>{{ entry.endDate }}</p><p>{{ entry.endTime }}</p></div>
+                <md-divider></md-divider>
+            </div>
+        </div>        
+    </md-list-item>
+    <md-list-item>            
+        <div layout="row" layout-fill>
+            <md-icon>work</md-icon>
+            <div>{{ entry.case }}</div>
+        </div>        
+    </md-list-item>            
+</md-list>
